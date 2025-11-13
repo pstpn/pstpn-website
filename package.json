@@ -1,7 +1,7 @@
 {
   "name": "pstpn-website",
   "version": "1.0.0",
-  "description": "A stunning portfolio website that mimics Visual Studio Code's interface with smooth animations and interactive features.",
+  "description": "Portfolio website that mimics Visual Studio Code's interface.",
   "main": "index.js",
   "type": "module",
   "homepage": "https://pstpn.github.io/pstpn-website",

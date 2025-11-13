@@ -73,23 +73,24 @@ class PortfolioApp {
     
     setupKeyboardShortcuts() {
         document.addEventListener('keydown', (e) => {
-            const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-            const cmdOrCtrl = isMac ? e.metaKey : e.ctrlKey;
-            
+            // Treat Ctrl (Windows/Linux) and Meta/Cmd (macOS) equivalently
+            const cmdOrCtrl = e.ctrlKey || e.metaKey;
+            const key = (e.key || '').toLowerCase();
+
             // Cmd/Ctrl + P - Command Palette
-            if (cmdOrCtrl && e.key === 'p') {
+            if (cmdOrCtrl && key === 'p') {
                 e.preventDefault();
                 this.toggleCommandPalette();
             }
-            
+
             // Cmd/Ctrl + B - Toggle Sidebar
-            if (cmdOrCtrl && e.key === 'b') {
+            if (cmdOrCtrl && key === 'b') {
                 e.preventDefault();
                 this.toggleSidebar();
             }
-            
+
             // Escape - Close Command Palette
-            if (e.key === 'Escape') {
+            if (key === 'escape' || e.key === 'Escape') {
                 this.closeCommandPalette();
             }
         });
