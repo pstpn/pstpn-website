@@ -1,0 +1,287 @@
+/* Theme System - Popular Programming Themes */
+
+/* VS Code Dark+ (Default) */
+:root[data-theme="vscode-dark"],
+:root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #252526;
+    --bg-tertiary: #2d2d30;
+    --bg-hover: #2a2d2e;
+    --bg-active: #37373d;
+    --border-color: #3c3c3c;
+    --text-primary: #d4d4d4;
+    --text-secondary: #858585;
+    --accent-blue: #007acc;
+    --accent-blue-hover: #1a8ccc;
+    
+    /* Syntax colors */
+    --color-comment: #6a9955;
+    --color-keyword: #569cd6;
+    --color-string: #ce9178;
+    --color-function: #dcdcaa;
+    --color-property: #9cdcfe;
+    --color-number: #b5cea8;
+    --color-class: #4ec9b0;
+}
+
+/* Monokai Theme */
+:root[data-theme="monokai"] {
+    --bg-primary: #272822;
+    --bg-secondary: #2e2e2e;
+    --bg-tertiary: #3e3d32;
+    --bg-hover: #3e3d32;
+    --bg-active: #49483e;
+    --border-color: #49483e;
+    --text-primary: #f8f8f2;
+    --text-secondary: #75715e;
+    --accent-blue: #66d9ef;
+    --accent-blue-hover: #7ee6ff;
+    
+    /* Syntax colors */
+    --color-comment: #75715e;
+    --color-keyword: #f92672;
+    --color-string: #e6db74;
+    --color-function: #a6e22e;
+    --color-property: #66d9ef;
+    --color-number: #ae81ff;
+    --color-class: #a6e22e;
+}
+
+/* Dracula Theme */
+:root[data-theme="dracula"] {
+    --bg-primary: #282a36;
+    --bg-secondary: #21222c;
+    --bg-tertiary: #343746;
+    --bg-hover: #44475a;
+    --bg-active: #6272a4;
+    --border-color: #44475a;
+    --text-primary: #f8f8f2;
+    --text-secondary: #6272a4;
+    --accent-blue: #8be9fd;
+    --accent-blue-hover: #9ff0ff;
+    
+    /* Syntax colors */
+    --color-comment: #6272a4;
+    --color-keyword: #ff79c6;
+    --color-string: #f1fa8c;
+    --color-function: #50fa7b;
+    --color-property: #8be9fd;
+    --color-number: #bd93f9;
+    --color-class: #50fa7b;
+}
+
+/* One Dark Theme */
+:root[data-theme="one-dark"] {
+    --bg-primary: #282c34;
+    --bg-secondary: #21252b;
+    --bg-tertiary: #2c313a;
+    --bg-hover: #2c313a;
+    --bg-active: #2c313c;
+    --border-color: #181a1f;
+    --text-primary: #abb2bf;
+    --text-secondary: #5c6370;
+    --accent-blue: #61afef;
+    --accent-blue-hover: #74beff;
+    
+    /* Syntax colors */
+    --color-comment: #5c6370;
+    --color-keyword: #c678dd;
+    --color-string: #98c379;
+    --color-function: #61afef;
+    --color-property: #56b6c2;
+    --color-number: #d19a66;
+    --color-class: #e5c07b;
+}
+
+/* Solarized Dark Theme */
+:root[data-theme="solarized-dark"] {
+    --bg-primary: #002b36;
+    --bg-secondary: #073642;
+    --bg-tertiary: #094454;
+    --bg-hover: #094454;
+    --bg-active: #0d5563;
+    --border-color: #0d5563;
+    --text-primary: #839496;
+    --text-secondary: #586e75;
+    --accent-blue: #268bd2;
+    --accent-blue-hover: #3a9fe6;
+    
+    /* Syntax colors */
+    --color-comment: #586e75;
+    --color-keyword: #859900;
+    --color-string: #2aa198;
+    --color-function: #268bd2;
+    --color-property: #b58900;
+    --color-number: #d33682;
+    --color-class: #cb4b16;
+}
+
+/* Nord Theme */
+:root[data-theme="nord"] {
+    --bg-primary: #2e3440;
+    --bg-secondary: #3b4252;
+    --bg-tertiary: #434c5e;
+    --bg-hover: #434c5e;
+    --bg-active: #4c566a;
+    --border-color: #4c566a;
+    --text-primary: #eceff4;
+    --text-secondary: #d8dee9;
+    --accent-blue: #88c0d0;
+    --accent-blue-hover: #9fcdda;
+    
+    /* Syntax colors */
+    --color-comment: #616e88;
+    --color-keyword: #81a1c1;
+    --color-string: #a3be8c;
+    --color-function: #88c0d0;
+    --color-property: #8fbcbb;
+    --color-number: #b48ead;
+    --color-class: #ebcb8b;
+}
+
+/* Tokyo Night Theme */
+:root[data-theme="tokyo-night"] {
+    --bg-primary: #1a1b26;
+    --bg-secondary: #16161e;
+    --bg-tertiary: #24283b;
+    --bg-hover: #292e42;
+    --bg-active: #3b4261;
+    --border-color: #414868;
+    --text-primary: #c0caf5;
+    --text-secondary: #565f89;
+    --accent-blue: #7aa2f7;
+    --accent-blue-hover: #8eb0ff;
+    
+    /* Syntax colors */
+    --color-comment: #565f89;
+    --color-keyword: #bb9af7;
+    --color-string: #9ece6a;
+    --color-function: #7aa2f7;
+    --color-property: #7dcfff;
+    --color-number: #ff9e64;
+    --color-class: #2ac3de;
+}
+
+/* GitHub Dark Theme */
+:root[data-theme="github-dark"] {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --bg-hover: #30363d;
+    --bg-active: #262c36;
+    --border-color: #30363d;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --accent-blue: #58a6ff;
+    --accent-blue-hover: #6bb5ff;
+    
+    /* Syntax colors */
+    --color-comment: #8b949e;
+    --color-keyword: #ff7b72;
+    --color-string: #a5d6ff;
+    --color-function: #d2a8ff;
+    --color-property: #79c0ff;
+    --color-number: #79c0ff;
+    --color-class: #ffa657;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    z-index: 1000;
+}
+
+.theme-button {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.theme-button:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent-blue);
+}
+
+.theme-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: slideDown 0.2s ease;
+}
+
+.theme-dropdown.active {
+    display: block;
+}
+
+.theme-option {
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s;
+    font-size: 13px;
+    color: var(--text-primary);
+}
+
+.theme-option:hover {
+    background: var(--bg-hover);
+}
+
+.theme-option.active {
+    background: var(--bg-active);
+    color: var(--accent-blue);
+}
+
+.theme-option .codicon-check {
+    color: var(--accent-blue);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar for theme dropdown */
+.theme-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.theme-dropdown::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.theme-dropdown::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.theme-dropdown::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}

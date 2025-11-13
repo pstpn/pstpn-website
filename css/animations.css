@@ -1,0 +1,397 @@
+/* Fade In Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Animations */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale Animations */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tab Opening Animation */
+@keyframes tabOpen {
+    from {
+        opacity: 0;
+        transform: scaleX(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+.tab {
+    animation: tabOpen 0.2s ease;
+}
+
+/* Tab Closing Animation */
+.tab.closing {
+    animation: tabClose 0.2s ease forwards;
+}
+
+@keyframes tabClose {
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+        max-width: 0;
+        padding: 0;
+        min-width: 0;
+    }
+}
+
+/* File Tree Expand/Collapse */
+.folder-children {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.folder-children.expanding {
+    animation: expandFolder 0.3s ease;
+}
+
+@keyframes expandFolder {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Content Loading Animation */
+.editor-content {
+    animation: fadeInUp 0.4s ease;
+}
+
+.editor-content.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Typing Effect */
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor Blink */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background: var(--text-primary);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* File Selection Animation */
+.file-item {
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.file-item:active {
+    transform: scale(0.98);
+}
+
+/* Project Card Hover */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    animation: cardHover 0.3s ease;
+}
+
+@keyframes cardHover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Skill Bar Animation */
+.skill-dot {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skill-dot.filled {
+    animation: skillPulse 0.5s ease;
+}
+
+@keyframes skillPulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sidebar Toggle Animation */
+.sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Command Palette Animation */
+.command-palette {
+    transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.command-palette.active {
+    animation: paletteShow 0.25s ease;
+}
+
+@keyframes paletteShow {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+/* Palette Item Selection */
+.palette-item {
+    transition: background 0.1s ease;
+}
+
+.palette-item.selected {
+    animation: itemSelect 0.2s ease;
+}
+
+@keyframes itemSelect {
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: var(--bg-hover);
+    }
+    100% {
+        background: var(--bg-active);
+    }
+}
+
+/* Loading Spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+/* Status Bar Pulse */
+.status-item.error {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Welcome Screen Animation */
+.welcome-screen {
+    animation: fadeIn 0.5s ease;
+}
+
+.welcome-title {
+    animation: fadeInDown 0.6s ease;
+}
+
+.welcome-subtitle {
+    animation: fadeInUp 0.7s ease;
+}
+
+.welcome-shortcuts {
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Press Effect */
+.form-button,
+.social-link {
+    transition: all 0.15s ease;
+}
+
+.form-button:active,
+.social-link:active {
+    transform: scale(0.96);
+}
+
+/* Icon Spin on Hover */
+.sidebar-actions i,
+.activity-icon {
+    transition: transform 0.2s ease;
+}
+
+.sidebar-actions i:hover {
+    transform: scale(1.1);
+}
+
+/* Line Highlight on Hover */
+.line-numbers .line {
+    transition: background 0.15s ease;
+}
+
+.line-numbers .line:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Tab Indicator Slide */
+.tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tab.active::after {
+    transform: scaleX(1);
+}
+
+/* Stagger Animation for Lists */
+.file-item,
+.project-card,
+.skill-category,
+.timeline-item {
+    animation: fadeInUp 0.4s ease backwards;
+}
+
+.file-item:nth-child(1),
+.project-card:nth-child(1),
+.skill-category:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.file-item:nth-child(2),
+.project-card:nth-child(2),
+.skill-category:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.file-item:nth-child(3),
+.project-card:nth-child(3),
+.skill-category:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.file-item:nth-child(4),
+.project-card:nth-child(4),
+.skill-category:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.file-item:nth-child(5),
+.project-card:nth-child(5),
+.skill-category:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

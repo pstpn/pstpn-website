@@ -1,0 +1,347 @@
+/* Responsive Design for Mobile and Tablet */
+
+/* Tablet Styles (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .vscode-container {
+        grid-template-columns: 48px 200px 1fr;
+    }
+    
+    .sidebar {
+        width: 200px;
+    }
+    
+    .welcome-title {
+        font-size: 28px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* Mobile Styles (< 768px) */
+@media screen and (max-width: 768px) {
+    .vscode-container {
+        grid-template-columns: 48px 1fr;
+    }
+    
+    /* Hide sidebar by default on mobile */
+    .sidebar {
+        position: fixed;
+        left: 48px;
+        top: 0;
+        bottom: 22px;
+        width: 250px;
+        z-index: 100;
+        transform: translateX(-100%);
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: flex !important;
+        position: fixed;
+        top: 10px;
+        left: 58px;
+        z-index: 101;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        padding: var(--spacing-xs);
+        cursor: pointer;
+    }
+    
+    /* Overlay for sidebar */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+    
+    /* Tab bar adjustments */
+    .tab {
+        min-width: 100px;
+        max-width: 150px;
+        font-size: 12px;
+    }
+    
+    .tab-label {
+        font-size: 12px;
+    }
+    
+    /* Editor padding */
+    .editor {
+        padding: var(--spacing-md);
+    }
+    
+    /* Welcome screen */
+    .welcome-title {
+        font-size: 24px;
+        flex-direction: column;
+    }
+    
+    .welcome-title i {
+        font-size: 36px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 14px;
+    }
+    
+    /* Content sections */
+    .content-section h1 {
+        font-size: 24px;
+    }
+    
+    .content-section h2 {
+        font-size: 20px;
+    }
+    
+    .content-section h3 {
+        font-size: 16px;
+    }
+    
+    /* Projects grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Skills grid */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Social links */
+    .social-links {
+        flex-direction: column;
+    }
+    
+    .social-link {
+        justify-content: center;
+    }
+    
+    /* Status bar */
+    .status-bar {
+        font-size: 11px;
+    }
+    
+    .status-left,
+    .status-right {
+        gap: var(--spacing-sm);
+    }
+    
+    .status-right .status-item:nth-child(2) {
+        display: none;
+    }
+    
+    /* Command palette */
+    .command-palette {
+        width: calc(100vw - 32px);
+        max-width: none;
+    }
+    
+    /* Timeline */
+    .timeline {
+        padding-left: var(--spacing-lg);
+    }
+    
+    .timeline-item::before {
+        left: -19px;
+    }
+    
+    /* Contact form */
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    /* Activity bar */
+    .activity-bar {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .activity-icon {
+        width: 48px;
+        height: 40px;
+    }
+    
+    .activity-icon i {
+        font-size: 20px;
+    }
+}
+
+/* Small Mobile (< 480px) */
+@media screen and (max-width: 480px) {
+    .tab {
+        min-width: 80px;
+        max-width: 120px;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .tab-icon {
+        display: none;
+    }
+    
+    .welcome-shortcuts {
+        font-size: 12px;
+    }
+    
+    .shortcut-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .editor {
+        padding: var(--spacing-sm);
+    }
+    
+    .project-card,
+    .skill-category {
+        padding: var(--spacing-md);
+    }
+    
+    .status-left .status-item:nth-child(3) {
+        display: none;
+    }
+}
+
+/* Landscape Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .vscode-container {
+        height: calc(100vh - 20px);
+    }
+    
+    .welcome-title {
+        font-size: 20px;
+    }
+    
+    .welcome-content {
+        max-width: 500px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .activity-bar,
+    .sidebar,
+    .tab-bar,
+    .status-bar,
+    .command-palette,
+    .loading-overlay {
+        display: none !important;
+    }
+    
+    .vscode-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .editor {
+        padding: 0;
+    }
+    
+    .content-section {
+        page-break-inside: avoid;
+    }
+    
+    .project-card,
+    .skill-category {
+        page-break-inside: avoid;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .activity-icon i,
+    .codicon {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .file-item,
+    .folder-item,
+    .tab,
+    .activity-icon {
+        min-height: 44px;
+    }
+    
+    .tab-close {
+        opacity: 1;
+        padding: var(--spacing-sm);
+    }
+    
+    /* Disable hover effects on touch */
+    .file-item:hover,
+    .folder-item:hover,
+    .tab:hover {
+        background: transparent;
+    }
+    
+    .file-item:active,
+    .folder-item:active,
+    .tab:active {
+        background: var(--bg-hover);
+    }
+}
+
+/* Dark Mode Override (if system prefers light) */
+@media (prefers-color-scheme: light) {
+    /* Keep VS Code dark theme regardless */
+    /* This ensures the VS Code aesthetic is maintained */
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #ffffff;
+        --text-primary: #ffffff;
+        --bg-hover: #3a3a3a;
+    }
+    
+    .file-item,
+    .folder-item,
+    .tab,
+    .project-card,
+    .skill-category {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Animation Preferences */
+@media (prefers-reduced-motion: reduce) {
+    .sidebar,
+    .command-palette,
+    .tab,
+    .file-item,
+    .project-card {
+        transition: none;
+        animation: none;
+    }
+}
